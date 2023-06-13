@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kalkulator</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="result">
+        <p id="resultBox"></p>
+      </div>
+      <div class="buttons">
+        <div
+          class="button actionbtn"
+          id="clear"
+          onclick="resultBox.innerHTML=''"
+        >
+          AC
+        </div>
+        <div
+          class="button actionbtn"
+          onclick="resultBox.innerHTML=resultBox.innerHTML.toString().slice(0,-1)"
+        >
+          DE
+        </div>
+        <div class="button actionbtn numbtn" onclick="resultBox.innerHTML+='%'">
+          %
+        </div>
+        <div
+          class="button calcactionbtn numbtn"
+          onclick="resultBox.innerHTML+='/'"
+        >
+          /
+        </div>
+        <div class="button numbtn seven" onclick="resultBox.innerHTML+=7">
+          7
+        </div>
+        <div class="button numbtn eight" onclick="resultBox.innerHTML+=8">
+          8
+        </div>
+        <div class="button numbtn nine" onclick="resultBox.innerHTML+=9">9</div>
+        <div
+          class="button calcactionbtn numbtn"
+          onclick="resultBox.innerHTML+='*'"
+        >
+          *
+        </div>
+        <div class="button numbtn four" onclick="resultBox.innerHTML+=4">4</div>
+        <div class="button numbtn five" onclick="resultBox.innerHTML+=5">5</div>
+        <div class="button numbtn six" onclick="resultBox.innerHTML+=6">6</div>
+        <div
+          class="button calcactionbtn numbtn"
+          onclick="resultBox.innerHTML+='-'"
+        >
+          -
+        </div>
+        <div class="button numbtn one" onclick="resultBox.innerHTML+=1">1</div>
+        <div class="button numbtn two" onclick="resultBox.innerHTML+=2">2</div>
+        <div class="button numbtn three" onclick="resultBox.innerHTML+=3">
+          3
+        </div>
+        <div
+          class="button calcactionbtn numbtn"
+          onclick="resultBox.innerHTML+='+'"
+        >
+          +
+        </div>
+        <div class="button numbtn zero" onclick="resultBox.innerHTML+=0">0</div>
+        <div class="button numbtn point" onclick="resultBox.innerHTML+='.'">
+          .
+        </div>
+        <div
+          class="button calcactionbtn"
+          id="total"
+          onclick="resultBox.innerHTML=eval(resultBox.innerHTML)"
+        >
+          =
+        </div>
+      </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
